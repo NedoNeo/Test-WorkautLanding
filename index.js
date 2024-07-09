@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     let minute = document.querySelector('.minute');
     let second = document.querySelector('.second');
 
-    minute.textContent = "00";
-    second.textContent = "10";
+    minute.textContent = "02";
+    second.textContent = "00";
 
     let interval = setInterval(() => Timer(minute, second,interval), 1000);
     let isAnimating = false
