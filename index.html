@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <header class="discount__time">
+        <div class="discount__time-container">
+            <p>Скидка действует:</p>
+            <div class="time-container">
+                <div class="timer">
+                    <span class="minute">09</span>
+                    <div class="colon__container">
+                        <div class="colon"></div>
+                        <div class="colon"></div>
+                    </div>
+                    <span class="second">59</span></div>
+                <div class="words">
+                    <span>минут</span>
+                    <span>секунд</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="discount__main">
+        <form class="pop_up hidden">
+            <div class="special_offer">
+                <p>горящее предложение</p>
+            </div>
+            <div class="close_button">
+            </div>
+            <h2 class="pop_up-title">Не упусти свой <span>последний шанс</span></h2>
+                <p class="pop_up-text">Мы знаем, как трудно начать.. <span>Поэтому!</span>
+                </p>
+                <div class="pop_up-discount-text">
+                    <p>Дарим скидку для лёгкого старта 🏃‍♂️</p>
+                </div>
+                <h3 class="pop_up-tarife-title">Посмотри, что мы для тебя приготовили 🔥</h3>
+                <div class="pop_up-tarife-container">
+                    <input type="radio" name="pop-up-tarif" id="pop-up-1" class="pop_up-input hidden" checked>
+                    <label for="pop-up-1" class="pop_up-tarif">
+                        
+                            
+                                <p class=" pop_up-price-title title-marker">1 неделя</p>
+                                <div class="rowContainer">
+                                    <p class="pop_up-old-price old-price-marker">999&#8381</p>
+                                </div>
+                            
+                            <div class="circle">
+                                <div class="circle-active"></div>
+                            </div>
+                        
+                        <div class="pop_up-new-price-container">
+                            <p class="pop_up-new-price new-price-marker">599&#8381</p>
+                            <div class="pop_up-discount dicsount-icon">-40%</div>
+                        </div>  
+                    </label>
+                    <input type="radio" name="pop-up-tarif" id="pop-up-2" class="pop_up-input hidden">
+                    <label for="pop-up-2" class="pop_up-tarif">
+                        
+                           
+                                <p class="pop_up-price-title title-marker"></p>
+                                <div class="rowContainer">
+                                    <p class="pop_up-old-price old-price-marker"></p>
+                                </div>
+                            
+                            <div class="circle">
+                                <div class="circle-active"></div>
+                            </div>
+                   
+                        <div class="pop_up-new-price-container">
+                            <p class="pop_up-new-price new-price-marker"></p>
+                            <div class="pop_up-discount dicsount-icon">-50%</div>
+                        </div>  
+                    </label>
+                    <input type="radio" name="pop-up-tarif" id="pop-up-3" class="pop_up-input hidden">
+                    <label for="pop-up-3" class="pop_up-tarif">
+                     
+                           
+                                <p class="pop_up-price-title title-marker"></p>
+                                <div class="rowContainer">
+                                    <p class="pop_up-old-price old-price-marker"></p>
+                                </div>
+                     
+                            <div class="circle">
+                                <div class="circle-active"></div>
+                            </div>
+               
+                        <div class="pop_up-new-price-container">
+                            <p class="pop_up-new-price new-price-marker">599&#8381</p>
+                            <div class="pop_up-discount dicsount-icon">-60%</div>
+                        </div>  
+                    </label>
+                </div>
+            <button type="submit" class="submit__button pop-up-button">Начать тренироваться</button>
+        </form>
+        <h1 class="discount__main-header">Выберите подходящий тарифный план</h1>
+        <div class="discount-container">
+            <img src="images/img.png" alt="Strongman" class="disount__main-image">
+            <form action="" class="discount__form">
+                <div class="discount__form-radio">
+                    <input type="radio" class="form-input hidden" name="tarif" value="" id="1" checked>
+                    <label for="1" class="discount_form-item radio">
+                        <div class="dicsount-icon">-30%</div>
+                        <h2 class="discount-title title-marker">1 неделя</h2>
+                        <div class="price_container">
+                            <p class="price new-price-marker">699&#8381</p>
+                            <p class="old-price old-price-marker">999&#8381</p>
+                        </div>
+                        <p class="tarif-text">Чтобы просто начать 👍🏻</p>
+                    </label>
+                    <input type="radio" class="form-input hidden" name="tarif" value="" id="2">
+                    <label for="2" class="discount_form-item radio">
+                        <div class="dicsount-icon">-40%</div>
+                        <h2 class="discount-title title-marker"></h2>
+                        <div class="price_container">
+                            <p class="price new-price-marker"></p>
+                            <p class="old-price old-price-marker"></p>
+                        </div>
+                        <p class="tarif-text">Привести тело впорядок 💪🏻</p>
+                    </label>
+                    <input type="radio" class="form-input hidden" name="tarif" value="" id="3">
+                    <label for="3" class="discount_form-item radio">
+                        <div class="dicsount-icon">-50%</div>
+                        <h2 class="discount-title title-marker"></h2>
+                        <div class="price_container">
+                            <p class="price new-price-marker"></p>
+                            <p class="old-price old-price-marker"></p>
+                        </div>
+                        <p class="tarif-text">Изменить образ жизни 🔥</p>
+                    </label>
+                </div>
+                <input type="radio" class="form-input hidden" name="tarif" value="" id="4">
+                <label class="horizont_form-item radio" for="4">
+                    <div class="dicsount-icon">-70%</div>
+                    <h2 class="horizont_form-title title-marker">навсегда</h2>
+                    <div class="price_container">
+                        <p class="price new-price-marker margin-price">5990&#8381</p>
+                        <p class="old-price old-price-marker">18 990&#8381</p>
+                    </div>
+                    
+                    <p class="tarif-text tarif-margin"></p>
+                    
+                </label>
+                <p class="motivation-text">Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем за 1 месяц</p>
+                <label class="policy_label">
+                    <input type="checkbox" class="policy hidden" required>
+                    <div class="checkbox"></div>
+                    <p>Я соглашаюсь с <a href="#" class="policy_link">Правилами сервиса</a> и условиями <a a href="#" class="policy_link">Публичной оферты.</a></p>
+                </label>
+                <button type="submit" class="submit__button">купить</button>
+                <p class="information__text"></p>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
