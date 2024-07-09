@@ -586,7 +586,7 @@ body::after {
 }
 
 .discount-container {
-    width: 1098px;
+    max-width: 1098px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

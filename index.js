@@ -77,20 +77,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     let minute = document.querySelector('.minute');
     let second = document.querySelector('.second');
 
-    minute.textContent = "02";
-    second.textContent = "00";
+    minute.textContent = "00";
+    second.textContent = "10";
 
     let interval = setInterval(() => Timer(minute, second,interval), 1000);
+    let isAnimating = false
 
     body.addEventListener('click', (e) => {
         if ((e.target.closest(".pop_up") === null) && (!popUp.classList.contains("hidden")) || (e.target === closeButton)) {
-            popUp.classList.toggle("change")
-            body.style.setProperty('--after-opacity', '0');
-            setTimeout(() => {
-                body.style.setProperty('--after-display', 'none');
-
-                popUp.classList.toggle("hidden")
-            }, 1000);
+        
+                if(isAnimating) {
+                    return
+                }
+                
+                isAnimating = true;
+                popUp.classList.toggle("change");
+                body.style.setProperty('--after-opacity', '0');
+                
+                setTimeout(() => {
+                    body.style.setProperty('--after-display', 'none');
+                    popUp.classList.toggle("hidden");
+                    isAnimating = false;
+                }, 1000);
+       
         }
     })
 
@@ -128,40 +137,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     .catch(error => {
         console.error("There was an error fetching the data:", error);
     });
-
-    // await fetch("https://t-pay.iqfit.app/subscribe/list-test").then((response) => {
-    //     if(!response.ok) {
-    //         throw new Error(`HTTP error! status: ${response.status}`);
-    //     }
-    //     return response.json();
-    // }).then((response) => {
-    //     response.forEach(item => {
-    //         if(item.isPopular) {
-    //             if(baseObject.hasOwnProperty("isPopular")) {
-    //                 baseObject.isPopular.push({"name" : item.name, "price" : item.price});
-    //             }  else  {
-    //                 baseObject.isPopular = [];
-    //                 baseObject.isPopular.push({"name" : item.name, "price" : item.price});
-    //             }
-    //            }else if(item.isDiscount) {
-    //             if(baseObject.hasOwnProperty("isDiscount")) {
-    //                 baseObject.isDiscount.push({"name" : item.name, "price" : item.price});
-    //             }  else  {
-    //                 baseObject.isDiscount = [];
-    //                 baseObject.isDiscount.push({"name" : item.name, "price" : item.price});
-    //             }
-    //            } else {
-    //             if(baseObject.hasOwnProperty('normal')) {
-    //                 baseObject.normal.push({"name" : item.name, "price" : item.price});
-    //             }  else  {
-    //                 baseObject.normal = [];
-    //                 baseObject.normal.push({"name" : item.name, "price" : item.price});
-    //             }
-    //            }
-    //     })
-    //     .catch((error) => {
-    //         console.error("Error fetching data: ", error);
-    //     })
        
 
         radioItem.forEach((element,index) => {
